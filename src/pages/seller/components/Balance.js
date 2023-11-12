@@ -26,7 +26,7 @@ function ShowBalance({ walletID, image }) {
     }
   }
   useEffect(() => {
-    getBalances();
+    // getBalances();
   }, []);
 
   if (!isLoadingWallet) {
