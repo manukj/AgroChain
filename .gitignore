@@ -11,6 +11,9 @@
 # production
 /build
 
+# igmore constant
+**/Constants.js
+
 # misc
 .DS_Store
 .env.local
