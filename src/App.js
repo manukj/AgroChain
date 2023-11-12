@@ -1,36 +1,37 @@
-import './App.css';
-import Farmer from './components/Farmer'
-import Seller from './components/Seller'
-import Home from './components/Home'
+import "./App.css";
+import Farmer from "./pages/Farmer";
+import Home from "./pages/Home";
+import Seller from "./pages/seller/Seller";
 
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/Seller">Seller</Link>
-            </li>
-            <li>
-              <Link to="/Farmer">Farmer</Link>
-            </li>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-          </ul>
-        </nav>
+    <div className="">
+      <Router>
+        <div>
+          <div className="flex space-x-4">
+            <a
+              href="/Seller"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            >
+              Seller
+            </a>
+            <a
+              href="/Farmer"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            >
+              Farmer
+            </a>
+          </div>
 
-        <Routes>
-          <Route path="/Farmer" element={<Farmer></Farmer>}/>
-          <Route path="/Seller" element={<Seller></Seller>}/>
-          <Route path="/" element={<Home></Home>}/>
-        </Routes>
-      </div>
-    </Router>
+          <Routes>
+            <Route path="/Farmer" element={<Farmer></Farmer>} />
+            <Route path="/Seller" element={<Seller></Seller>} />
+            <Route path="/" element={<Home></Home>} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
