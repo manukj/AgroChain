@@ -31,7 +31,7 @@ function ShowBalance({ walletID, image }) {
 
   if (!isLoadingWallet) {
     return (
-      <div className="h-28 w-full flex flex-row items-center justify-between bg-gray-200 p-6 rounded-md text-center">
+      <div className="h-28 border shadow-2xl border-dotted mt-3 border-black w-full flex flex-row items-center justify-between bg-gray-200 p-6 rounded-md text-center">
         <img
           className="h-24 w-24 rounded-full  object-cover"
           src={image}

@@ -1,5 +1,4 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Home from "./pages/Home";
 import Farmer from "./pages/farmer/Farmer";
@@ -24,7 +23,7 @@ function App() {
               Farmer
             </a>
           </div>
-          <ToastContainer />
+          <div className="flex w-full h-1 bg-white"></div>
           <Routes>
             <Route path="/Farmer" element={<Farmer></Farmer>} />
             <Route path="/Seller" element={<Seller></Seller>} />

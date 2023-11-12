@@ -22,7 +22,7 @@ function Farmer() {
   return (
     <div className="m-5">
       <div className="text-xl font-extrabold">Farmer Details</div>
-      <p>Welcome to the Seller page.</p>
+      <p>Welcome to the Farmer page.</p>
       <ShowBalance
         walletID={FARMER_WALLET_ID}
         image={farmerimage}
