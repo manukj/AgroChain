@@ -4,7 +4,6 @@ import { TEST_API_KEY } from "./../../Constants.js";
 function ShowBalance({ walletID, image }) {
   const [tokenBalance, setTokenBalance] = useState();
   const [isLoadingWallet, setIsLoadingWallet] = useState(true);
-  let walletNetwork;
 
   async function getBalances() {
     console.log("getting wallet api");
