@@ -26,7 +26,7 @@ function ShowBalance({ walletID, image }) {
     }
   }
   useEffect(() => {
-    // getBalances();
+    getBalances();
   }, []);
 
   if (!isLoadingWallet) {
@@ -37,13 +37,14 @@ function ShowBalance({ walletID, image }) {
           src={image}
           alt="Random Image"
         ></img>
-        <div className=" flex flex-col">
-          <p className="text-xs text-gray-600">Wallet Balance</p>
-          <p className="text-sm text-gray-600">
-            {tokenBalance.token.blockchain}
+        <div className=" flex flex-col ">
+          <p className="text-sm text-gray-800 underline underline-offset-4">Wallet Details</p>
+          <p className="text-xs text-black">Amount : {tokenBalance.amount}</p>
+          <p className="text-xs text-gray-500">
+            Chain : {tokenBalance.token.blockchain}
           </p>
-          <p className="text-sm text-gray-600">{walletID}</p>
-          <p className="text-sm text-gray-600">{tokenBalance.amount}</p>
+          <p className="text-xs text-gray-500">{walletID}</p>
+          
         </div>
       </div>
     );

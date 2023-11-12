@@ -1,8 +1,8 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
-import Farmer from "./pages/Farmer";
 import Home from "./pages/Home";
+import Farmer from "./pages/farmer/Farmer";
 import Seller from "./pages/seller/Seller";
 
 function App() {

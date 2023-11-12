@@ -48,7 +48,7 @@ function UpcomingTransactions() {
 function Seller() {
   return (
     <div className="m-5">
-      <div className="text-xl font-extrabold">Seller Page</div>
+      <div className="text-xl font-extrabold">Seller Details</div>
       <p>Welcome to the Seller page.</p>
       <ShowBalance walletID={SELLER_WALLET_ID} image={seller}></ShowBalance>
       <NewTransaction p_farmer={farmer_}></NewTransaction>

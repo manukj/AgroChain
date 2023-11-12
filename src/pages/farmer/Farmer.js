@@ -1,8 +1,8 @@
 import React from "react";
-import { farmer_, seller_ } from "./seller/Seller";
-import ShowBalance from "./seller/components/Balance";
-import farmerimage from "../images/farmer.jpeg";
-import { SELLER_WALLET_ID } from "./Constants.js";
+import farmerimage from "../../images/farmer.jpeg";
+import { SELLER_WALLET_ID } from "../Constants.js";
+import { farmer_, seller_ } from "../seller/Seller.js";
+import ShowBalance from "../seller/components/Balance.js";
 
 function PendingTransaction() {
   let message;
