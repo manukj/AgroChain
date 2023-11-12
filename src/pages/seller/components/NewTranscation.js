@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import farmerImage from "../../../images/farmer.jpeg";
 
 import {
@@ -44,8 +45,20 @@ function NewTransaction({ p_farmer }) {
     try {
       const { data } = await axios.request(options);
       console.log(data);
+      if (data.state == "INITIATED") {
+        toast.success("Transcation Initated", {
+          position: toast.POSITION.TOP_CENTER,
+        });
+      } else {
+        toast.success("Transcation failed", {
+          position: toast.POSITION.TOP_CENTER,
+        });
+      }
     } catch (error) {
       console.error(error);
+      toast.success("Transcation failed", {
+        position: toast.POSITION.TOP_CENTER,
+      });
     }
   }
 

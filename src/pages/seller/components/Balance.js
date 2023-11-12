@@ -31,7 +31,7 @@ function ShowBalance({ walletID, image }) {
 
   if (!isLoadingWallet) {
     return (
-      <div className="h-28 w-64 flex flex-row items-center justify-between bg-gray-200 p-6 rounded-md text-center">
+      <div className="h-28 w-full flex flex-row items-center justify-between bg-gray-200 p-6 rounded-md text-center">
         <img
           className="h-24 w-24 rounded-full  object-cover"
           src={image}
@@ -42,13 +42,14 @@ function ShowBalance({ walletID, image }) {
           <p className="text-sm text-gray-600">
             {tokenBalance.token.blockchain}
           </p>
+          <p className="text-sm text-gray-600">{walletID}</p>
           <p className="text-sm text-gray-600">{tokenBalance.amount}</p>
         </div>
       </div>
     );
   } else {
     return (
-      <div className="h-28 w-64 flex flex-row items-center justify-center bg-gray-200 p-6 rounded-md text-center">
+      <div className="h-28 w-full  flex flex-row items-center justify-center bg-gray-200 p-6 rounded-md text-center">
         <span class="loading loading-bars loading-lg"></span>
       </div>
     );

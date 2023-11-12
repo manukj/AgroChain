@@ -1,9 +1,9 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Farmer from "./pages/Farmer";
 import Home from "./pages/Home";
 import Seller from "./pages/seller/Seller";
-
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
               Farmer
             </a>
           </div>
-
+          <ToastContainer />
           <Routes>
             <Route path="/Farmer" element={<Farmer></Farmer>} />
             <Route path="/Seller" element={<Seller></Seller>} />

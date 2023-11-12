@@ -1,6 +1,8 @@
 import React from "react";
 import { farmer_, seller_ } from "./seller/Seller";
-
+import ShowBalance from "./seller/components/Balance";
+import farmerimage from "../images/farmer.jpeg";
+import { SELLER_WALLET_ID } from "./Constants.js";
 
 function PendingTransaction() {
   let message;
@@ -17,9 +19,13 @@ function PendingTransaction() {
 
 function Farmer() {
   return (
-    <div>
-      <h1>Farmer Details</h1>
-      <p>Welcome to the farmer page.</p>
+    <div className="m-5">
+      <div className="text-xl font-extrabold">Farmer Details</div>
+      <p>Welcome to the Seller page.</p>
+      <ShowBalance
+        walletID={SELLER_WALLET_ID}
+        image={farmerimage}
+      ></ShowBalance>
       <PendingTransaction />
     </div>
   );
